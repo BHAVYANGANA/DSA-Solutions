@@ -4,15 +4,11 @@ public:
         
        
         int n = prices.size();
-
         int mini = INT_MAX;
         int profit = 0;
-        for(int i = 0, j = 1; i,j <n;){
+        for(int i = 0; i < n; i++){
                 mini = min(mini, prices[i]);
-                int cost = prices[j] - mini;
-                profit = max(profit, cost);
-                j++;
-                i++;
+                profit = max(profit, prices[i] - mini);
         }
 
         return profit;
