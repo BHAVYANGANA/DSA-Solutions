@@ -6,9 +6,10 @@ public:
         int n = prices.size();
         int mini = INT_MAX;
         int profit = 0;
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n - 1; i++){
                 mini = min(mini, prices[i]);
-                profit = max(profit, prices[i] - mini);
+                int cost = prices[i+1] - mini;
+                profit = max(profit, cost);
         }
 
         return profit;
