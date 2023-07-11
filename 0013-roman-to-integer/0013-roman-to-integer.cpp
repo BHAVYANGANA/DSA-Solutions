@@ -22,9 +22,7 @@ public:
         }
         return sum;*/
 
-        int sum = 0;
-        int n = s.size();
-        int i = 0;
+        int sum = 0, n = s.size(), i = 0;
         while(i < n){
             if( mp[s[i]] >= mp[s[i + 1]]){
                 sum += mp[s[i]];         
